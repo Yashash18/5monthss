@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Love Story 🩷</title>
+  <style>
+    body {
+      background: linear-gradient(#ffe6f0, #fff0f6);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      color: #ff69b4;
+      padding: 50px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #ffc0cb;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+
+    .heart {
+      color: red;
+    }
+
+    .kitty-img {
+      width: 200px;
+      margin-top: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px pink;
+      transition: transform 0.3s ease;
+    }
+
+    .kitty-img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .love-note {
+      background: #fff0f6;
+      border: 3px dotted #ff69b4;
+      border-radius: 20px;
+      display: inline-block;
+      padding: 30px;
+      margin-top: 30px;
+      box-shadow: 0 0 30px #ffb6c1;
+      max-width: 600px;
+    }
+
+    .love-story {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .story-block {
+      background: #ffe6f8;
+      border: 2px dashed #ff69b4;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 30px auto;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 0 20px #ffc0cb;
+    }
+
+    .button {
+      margin-top: 30px;
+      padding: 15px 40px;
+      background: linear-gradient(135deg, #ff85c1, #ff69b4);
+      border: none;
+      border-radius: 50px;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff69b4;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: linear-gradient(135deg, #ffa3cf, #ff85c1);
+      transform: scale(1.05);
+    }
+
+    .floating-heart {
+      position: absolute;
+      color: pink;
+      font-size: 2em;
+      animation: floatUp 7s infinite ease-in;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-800px) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    .extra-images {
+      margin-top: 30px;
+    }
+
+    .extra-images img {
+      width: 150px;
+      margin: 10px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px pink;
+      transition: transform 0.3s ease;
+    }
+
+    .extra-images img:hover {
+      transform: scale(1.1) rotate(-5deg);
+    }
+
+    .signature {
+      margin-top: 50px;
+      font-size: 1.1em;
+      color: #ff69b4;
+    }
+
+    audio {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy 5 Months My Love! 🎀</h1>
+  <p>My sweetest, my best friend <span class="heart">❤️</span></p>
+
+  <img class="kitty-img" src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_Kitty_character_portrait.png" alt="Cute Kitty">
+
+  <div class="love-note">
+    <p>Every moment with you feels like a fairytale,</p>
+    <p>full of laughter, hugs, and endless love.</p>
+    <p>You make my world brighter and my heart happier, always!</p>
+  </div>
+
+  <button class="button" onclick="showImages()">Click for Extra Cuteness!</button>
+
+  <div class="extra-images" id="extraImages" style="display: none;">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_Kitty_character_portrait.png" alt="Kitty 1">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_Kitty_character_portrait.png" alt="Kitty 2">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Hello_Kitty_character_portrait.png" alt="Kitty 3">
+  </div>
+
+  <!-- Love Story Scroll -->
+  <div class="love-story">
+    <h2>Our Love Story ✨</h2>
+    <div class="story-block">💞 The first time I saw your smile, I knew my world was about to change.</div>
+    <div class="story-block">🌸 Our endless late-night chats made me fall for you even more.</div>
+    <div class="story-block">🫶 Our little inside jokes and silly moments make every day special.</div>
+    <div class="story-block">💕 5 months of us — and it’s just the beginning of our forever!</div>
+  </div>
+
+  <!-- Soft Background Music -->
+  <audio controls loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="signature">
+    Made with all my love, just for you 🩷
+  </div>
+
+  <!-- Floating hearts -->
+  <script>
+    const colors = ['#ff69b4', '#ff85c1', '#ffb6c1', '#ffc0cb'];
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('floating-heart');
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.animationDuration = 5 + Math.random() * 3 + 's';
+      heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+      heart.innerHTML = '💖';
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+    setInterval(createHeart, 500);
+
+    function showImages() {
+      const extraImages = document.getElementById('extraImages');
+      extraImages.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
