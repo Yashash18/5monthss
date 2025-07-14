@@ -135,7 +135,7 @@
   <h1>Happy 5 Months My Love! 🎀</h1>
   <p>My sweetest, my best friend <span class="heart">❤️</span></p>
 
-  <img class="kitty-img" src="WhatsApp Image 2025-07-14 at 15.18.03_58638443.jpg" alt="Cute Kitty">
+  <img class="kitty-img" src="WhatsApp Image 2025-07-14 at 15.18.03_58638443.jpg" alt="uss">
 
   <div class="love-note">
     <p>Every moment with you feels like a fairytale,</p>
