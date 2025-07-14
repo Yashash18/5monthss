@@ -124,13 +124,17 @@
       font-size: 1.1em;
       color: #ff69b4;
     }
+
+    audio {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <h1>Happy 5 Months My Love! 🎀</h1>
   <p>My sweetest, my best friend <span class="heart">❤️</span></p>
 
-  <img class="kitty-img" src="WhatsApp Image 2025-07-14 at 15.18.03_f06e5cb7.jpg" alt="Cute Pic">
+  <img class="kitty-img" src="WhatsApp Image 2025-07-14 at 15.18.03_f06e5cb7.jpg" alt="Cute Kitty">
 
   <div class="love-note">
     <p>Every moment with you feels like a fairytale,</p>
@@ -141,9 +145,9 @@
   <button class="button" onclick="showImages()">Click for Extra Cuteness!</button>
 
   <div class="extra-images" id="extraImages" style="display: none;">
-    <img src="WhatsApp Image 2025-07-14 at 15.18.03_d1270002.jpg" alt="Cute 1">
-    <img src="stwon1.jpg" alt="Cute 2">
-    <img src="icecream1" alt="Cute 3">
+    <img src="WhatsApp Image 2025-07-14 at 15.18.03_d1270002.jpg" alt="Kitty 1">
+    <img src="stwon1.jpg" alt="Kitty 2">
+    <img src="icecream1" alt="Kitty 3">
   </div>
 
   <!-- Love Story Scroll -->
@@ -155,12 +159,9 @@
     <div class="story-block">💕 5 months of our love</div>
   </div>
 
-  <!-- Play Our Song Button -->
-  <button class="button" onclick="playMusic()">Play Our Song 🎵</button>
-
-  <!-- Hidden audio player -->
-  <audio id="bgmusic" loop>
-    <source src="oursong.mp3" type="audio/mpeg">
+  <!-- Soft Background Music -->
+  <audio controls loop>
+    <source src="heat-waves-official-video.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
@@ -168,7 +169,7 @@
     Made with all my love, just for you 🩷
   </div>
 
-  <!-- Floating hearts and functions -->
+  <!-- Floating hearts -->
   <script>
     const colors = ['#ff69b4', '#ff85c1', '#ffb6c1', '#ffc0cb'];
     function createHeart() {
@@ -188,13 +189,6 @@
     function showImages() {
       const extraImages = document.getElementById('extraImages');
       extraImages.style.display = 'block';
-    }
-
-    function playMusic() {
-      const audio = document.getElementById('bgmusic');
-      audio.play().catch(() => {
-        console.log('Autoplay blocked until user interacts.');
-      });
     }
   </script>
 </body>
